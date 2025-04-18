@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "LinkedIn Profile Enhancer Widget",
+  "version": "1.0",
+  "description": "Enhances LinkedIn profiles by showing match score and account status.",
+  "content_scripts": [
+    {
+      "matches": ["://www.linkedin.com/in/"],
+      "js": ["content.js"],
+      "css": ["style.css"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["data.json"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
